@@ -3,7 +3,7 @@ name: Create Worktree
 description: Creates Git Worktree for an agent.
 ---
 
-We want to create a Git Worktree for an agent.
+We want to create a Git worktree for an agent.
 
 Think about doing the following step by step:
 

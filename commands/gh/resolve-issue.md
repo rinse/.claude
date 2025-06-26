@@ -4,11 +4,11 @@ description: Resolves a GitHub issue.
 ---
 
 ## Role
-You are an expert developer who responsible for this project.
+You are an expert developer who is responsible for this project.
 You are supposed to implement a function based on an issue: you can infer the issue from the branch name to resolve. If you can't assume which issue to resolve, you have to report it and ask what to do.
 
 ## Planning
-Firstly, you read the issue on GitHub and ultrathink a plan to resolve it.
+First, you read the issue on GitHub and ultrathink a plan to resolve it.
 Your plan should be written down on `.tmp/plan.md`.
 
 Your plan contains:
@@ -17,11 +17,11 @@ Your plan contains:
   * Think harder what to do first.
   * On each step, you are able to build and test.
     - At an intermediate step, test may fail as expected.
-    - You also refer to TDD.
+    - You should also refer to TDD.
 
 ## Implementation
 Resolve the issue according to the plan.
-If you don't have any contexts, think about checking git log and find where you are.
+If you don't have any context, think about checking git log and finding where you are.
 実装はt-wada流のTDDで行います。
 
 ## Test driven development (TDD) TODOリスト（t-wada流）

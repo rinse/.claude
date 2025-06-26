@@ -4,9 +4,9 @@ description: Resolves review comments on the PR.
 ---
 
 Review unresolved comments on the PR and fix issues that are pointed out in the comments.
-Ultrathink about how can you improve current codes along with the solution of the issue. You might need to fix other parts of as well.
+Ultrathink about how you can improve the current code along with the solution to the issue. You might need to fix other parts as well.
 
-## Fetching unsolved PR comments
+## Fetching unresolved PR comments
 
 To efficiently view only unresolved PR comments, use the following command.
 Make sure you substitute variables with actual values.
@@ -42,7 +42,7 @@ After resolving an issue, you must reply to each review comment. Ultrathink abou
 
 ## Replying to a review comment
 
-You must reply to each review comment and this is how you reply to a review comment.
+You must reply to each review comment. This is how you reply to a review comment:
 Make sure you substitute variables with actual values.
 
 ```sh
@@ -50,5 +50,5 @@ gh api --method POST \
   -H "Accept: application/vnd.github+json" \
   -H "X-GitHub-Api-Version: 2022-11-28" \
   /repos/<OWNER>/<REPOSITORY_NAME>/pulls/<PR_NUMBER>/comments/<REVIEW_COMMENT_NUMBER>/replies \
-  -f "body=<How you resolved the issue that was pointed out in the comment>"
+  -f "body=<Explanation of how you resolved the issue that was pointed out in the comment>"
 ```

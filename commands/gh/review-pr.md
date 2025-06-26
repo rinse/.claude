@@ -4,7 +4,7 @@ description: Review a Pull Request on GitHub.
 ---
 
 ## Role
-You are an expert developer who responsible for this project.
+You are an expert developer who is responsible for this project.
 Assume the code may contain mistakes or improvement points.
 
 ## Critical-Thinking Lens
@@ -24,11 +24,11 @@ You review it taking a note in `.tmp/notes/<PR_NUMBER>.md`.
 
 If you find the existing `.tmp/notes/<PR_NUMBER>.md`, read it and ultrathink what you need to add to it with the following instructions.
 
-Firstly, you read the title, description, and already-commented reviews and take a note with critically ultrathink:
+First, you read the title, description, and already-commented reviews and take notes while critically ultrathink:
 - Why is this PR submitted?
 - What is the point of the PR?
 
-If the PR resolves an iasue, read the issue as well and critically ultrathink:
+If the PR resolves an issue, read the issue as well and critically ultrathink:
 - Does this PR really resolves the issue?
 - Is this PR really consistent with the issue?
 
@@ -45,9 +45,9 @@ Example:
 ...
 ```
 
-Secondly, you start reading diffs one by one.
-You read one entire file or 100 lines of a diff, you critically think harder and take notes what you want to point out. You MUST make sure to have the exact line number where you want to point out. This is REQUIRED for the later process. Think about you read the entire files or tracing execution paths on the local filesystem to understand the context and fulfill your responsibility. Skip noting if no such points found.
-Make sure you don't write down stuffs that is already pointed out.
+Second, you start reading diffs one by one.
+You read one entire file or 100 lines of a diff, you critically think harder and take notes what you want to point out. You MUST make sure to have the exact line number where you want to point out. This is REQUIRED for the later process. Think about reading the entire files or tracing execution paths on the local filesystem to understand the context and fulfill your responsibility. Skip taking notes if no such points are found.
+Make sure you don't write down things that have already been pointed out.
 Repeat this read-write process until no diffs remain.
 
 Example:
@@ -56,23 +56,23 @@ Example:
 ## Review changes
 - relative/path/to/file
   * 10: it should be bar instead of foo because...
-  * 15-20: These lines looks suspicipus because... It requires additional unit tests at the point of view from...
+  * 15-20: These lines look suspicious because... It requires additional unit tests from the point of view of...
 ```
 
-Thirdly, you verify consistency across the entire changes. At this point, you alreadly read the entire files. You critically ultrathink of the following points and another point that you have to mension:
-- Naming consistency (types, classes, variables, functions, mothods, endpoints, etc.)
-- Duplicate codes (Same codes appear in multiple files)
-- Dead codes (A codes which is to be called from other files but not used anywhere)
-- Redefined codes that are redundant; it should be replaced with other codes in the cadebase or available libraries in the project.
+Third, you verify consistency across the entire changes. At this point, you have already read the entire files. You critically ultrathink of the following points and any other points that you have to mention:
+- Naming consistency (types, classes, variables, functions, methods, endpoints, etc.)
+- Duplicate code (Same code appears in multiple files)
+- Dead code (Code which is to be called from other files but not used anywhere)
+- Redefined code that is redundant; it should be replaced with other code in the codebase or available libraries in the project.
 
-When you mension codes, you MUST include the exact line number here as well.
+When you mention code, you MUST include the exact line number here as well.
 
 Examples:
 
 ```
 ## Consistency verification
 - relative/path/to/file
-  * 10-13: this function should be replaced with the function foo in relative/path/to/anotger/file, which is a more general utility for this specific purpose.
+  * 10-13: this function should be replaced with the function foo in relative/path/to/another/file, which is a more general utility for this specific purpose.
 ```
 
 ## Reviewing codes - Line-by-Line Comments
