@@ -1,0 +1,9 @@
+# Credentials
+.credentials.json
+
+# Local settings
+.update.lock
+ide
+projects
+statsig
+todos
