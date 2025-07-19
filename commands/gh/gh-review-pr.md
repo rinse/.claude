@@ -28,7 +28,7 @@ First, you read the title, description, and already-commented reviews and take n
 - Why is this PR submitted?
 - What is the point of the PR?
 
-If the PR resolves an issue, read the issue as well and critically ultrathink:
+If the PR resolves an issue, read the issue as well and critically ultrathink about:
 - Does this PR really resolves the issue?
 - Is this PR really consistent with the issue?
 

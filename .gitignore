@@ -7,3 +7,6 @@ ide
 projects
 statsig
 todos
+
+# Outputs
+shell-snapshots/

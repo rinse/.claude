@@ -2,6 +2,11 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Thinking
+
+You MUST always think in English even unless a user tells you to think in a specific language;
+even if the user tells you to speak in other languages or the user talks to you in other languages.
+
 ## Critical Behavior Guidelines
 
 ### Honesty About Capabilities
