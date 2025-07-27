@@ -1,6 +1,6 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+This file provides guidance to Claude Code (claude.ai/code) when working with code.
 
 ## Thinking
 
@@ -36,11 +36,11 @@ This principle applies to all specific technical tasks - be proactive about rese
 
 ## Git Workflow Preferences
 
-- **Branch checking**: When starting a new task, check the current branch with `git branch --show-current`. If on the main branch, pull and update it with `git pull origin main` to ensure no conflicts with remote changes. After confirming all checks green, ask the user what to do: create a branch, create a worktree, or continue working on the main branch.
-- **Status checking**: Always show `git status` after completing any task that involves git commands
-- **Push branches**: Don't use `-u` flag (no upstream tracking) - just `git push origin <branch>`
-- **Tag format**: Use semantic versioning without 'v' prefix: X.Y.Z e.g., `1.0.0`.
-- **PR creation**: Always collect git context first with `git diff main...HEAD` and `git log` to understand all changes
+- **Branch checking: When starting a new task, check the current branch with `git branch --show-current`. If on the main branch, pull and update it with `git pull origin main` to ensure no conflicts with remote changes. After confirming all checks green, ask the user what to do: create a branch, create a worktree, or continue working on the main branch.
+- Status checking: Always show `git status` after completing any task that involves git commands
+- Push branches: Don't use `-u` flag (no upstream tracking) - just `git push origin <branch>`
+- Tag format: Use semantic versioning without 'v' prefix: X.Y.Z e.g., `1.0.0`.
+- PR creation: Always collect git context first with `git diff main...HEAD` and `git log` to understand all changes
 
 ## File Management
 
