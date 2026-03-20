@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "cleanupPeriodDays": 3650,
   "includeCoAuthoredBy": false,
   "permissions": {
@@ -58,23 +59,58 @@
       "Read(**/secrets/**/)",
       "Read(**/*token*)",
       "Read(**/*key*)",
-      "Bash(nc:*)",
-      "mcp__supabase__execute_sql"
+      "Bash(nc:*)"
     ],
     "defaultMode": "acceptEdits"
   },
   "hooks": {
-    "PostToolUse": [
+    "PreToolUse": [
       {
-        "matcher": "Write|Edit|MultiEdit",
         "hooks": [
           {
             "type": "command",
-            "command": "echo Hello World!"
+            "command": "echo PreToolUse hook"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo PostUoolUse"
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo SessionEnd"
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo PreCompact"
           }
         ]
       }
     ]
   },
-  "model": "opus"
+  "statusLine": {
+    "type": "command",
+    "command": "/home/rinse/.claude/statusline/main.ts"
+  },
+  "effortLevel": "high",
+  "feedbackSurveyState": {
+    "lastShownTime": 1754032915018
+  }
 }

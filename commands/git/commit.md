@@ -3,7 +3,7 @@ name: Commit Changes
 description: Commit changes
 ---
 
-We need to commit changes.
+You are going to commit changes.
 
 Think about doing the following step by step:
 

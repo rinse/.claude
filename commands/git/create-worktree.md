@@ -1,18 +1,14 @@
 ---
 name: Create Worktree
-description: Creates Git Worktree for an agent.
+description: Creates git worktree for an agent.
 ---
 
-We want to create a Git worktree for an agent.
-
-Think about doing the following step by step:
+Creating a Git worktree, do the following step by step:
 
 ## Create a Git Worktree
-
 Create a Git worktree for $ARGUMENTS on `.wt/<ISSUE_NUMBER>`.
 
 ## Copy local settings that are not controlled by Git
-
 Copy the local Claude settings to the new worktree with:
 
 ```sh
