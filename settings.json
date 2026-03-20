@@ -107,7 +107,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "/home/rinse/.claude/statusline/main.ts"
+    "command": "~/.claude/statusline/main.ts"
   },
   "effortLevel": "high",
   "feedbackSurveyState": {
