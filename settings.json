@@ -1,7 +1,10 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "cleanupPeriodDays": 3650,
-  "includeCoAuthoredBy": false,
+  "attribution": {
+    "commit": "",
+    "pr": ""
+  },
   "permissions": {
     "allow": [
       "Bash(cat:*)",
@@ -19,23 +22,23 @@
       "Bash(gh release view:*)",
       "Bash(gh run list:*)",
       "Bash(gh run view:*)",
-      "Bash(docker compose logs)",
-      "mcp__context7__resolve-library-id",
-      "mcp__context7__get-library-docs"
+      "Bash(docker compose logs:*)"
+    ],
+    "ask": [
+      "Bash(git push:*)"
     ],
     "deny": [
       "Bash(sudo:*)",
-      "Bash(rm:*)",
+      "Bash(rm -rf:*)",
+      "Bash(rm -r:*)",
       "Bash(rm -fr:*)",
+      "Bash(rm -f:*)",
+      "Bash(rm --force:*)",
       "Bash(git clone:*)",
-      "Bash(git rebase:*)",
-      "Bash(git switch:*)",
-      "Bash(git checkout:*)",
       "Bash(git add -A:*)",
       "Bash(git add --all:*)",
       "Bash(git commit -a:*)",
       "Bash(git commit --all:*)",
-      "Bash(git push origin main:*)",
       "Bash(git push -f:*)",
       "Bash(git push --force:*)",
       "Bash(git push -u:*)",
@@ -56,50 +59,24 @@
       "Read(credentials)",
       "Read(.credentials.json)",
       "Read(.env*)",
-      "Read(**/secrets/**/)",
-      "Read(**/*token*)",
-      "Read(**/*key*)",
+      "Read(**/secrets/**)",
+      "Read(**/*.pem)",
+      "Read(**/*.key)",
+      "Read(~/.ssh/**)",
+      "Read(~/.aws/**)",
       "Bash(nc:*)"
     ],
     "defaultMode": "acceptEdits"
   },
   "hooks": {
-    "PreToolUse": [
+    "StopFailure": [
       {
+        "matcher": "",
         "hooks": [
           {
             "type": "command",
-            "command": "echo PreToolUse hook"
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo PostUoolUse"
-          }
-        ]
-      }
-    ],
-    "SessionEnd": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo SessionEnd"
-          }
-        ]
-      }
-    ],
-    "PreCompact": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "echo PreCompact"
+            "command": "bash ~/.claude/auto-resume/recorder.sh",
+            "timeout": 15
           }
         ]
       }
@@ -109,8 +86,17 @@
     "type": "command",
     "command": "~/.claude/statusline/main.ts"
   },
+  "enabledPlugins": {
+    "rust-analyzer-lsp@claude-plugins-official": true
+  },
   "effortLevel": "high",
+  "advisorModel": "opus",
+  "tui": "fullscreen",
+  "remoteControlAtStartup": true,
+  "agentPushNotifEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754032915018
-  }
+  },
+  "model": "claude-fable-5[1m]",
+  "fallbackModel": ["claude-sonnet-5"]
 }

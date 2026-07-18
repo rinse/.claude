@@ -8,5 +8,30 @@ projects
 statsig
 todos
 
-# Outputs
+# Runtime state
 shell-snapshots/
+# auto-resume is its own git repository
+auto-resume/
+backups/
+bin/
+cache/
+daemon/
+daemon.lock
+daemon.log
+daemon.status.json
+debug/
+file-history/
+history.jsonl
+jobs/
+paste-cache/
+plans/
+plugins/
+session-env/
+sessions/
+tasks/
+uploads/
+gh-pr-status-cache.json
+mcp-needs-auth-cache.json
+stats-cache.json
+.last-cleanup
+.last-update-result.json
