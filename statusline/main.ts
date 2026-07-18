@@ -12,8 +12,8 @@ async function main() {
         modelPart(data.model?.display_name ?? "Unknown"),
         contextPart(data.context_window?.used_percentage),
         ...rateLimitParts(
-            data.rate_limits?.five_hour?.used_percentage,
-            data.rate_limits?.seven_day?.used_percentage,
+            data.rate_limits?.five_hour,
+            data.rate_limits?.seven_day,
         ),
     ];
 
