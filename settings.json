@@ -24,19 +24,6 @@
       "Bash(gh run view:*)",
       "Bash(docker compose logs:*)"
     ],
-    "ask": [
-      "Bash(git push:*)",
-      "Bash(rm -rf:*)",
-      "Bash(rm -r:*)",
-      "Bash(rm -fr:*)",
-      "Bash(rm -f:*)",
-      "Bash(rm --force:*)",
-      "Bash(git branch -D:*)",
-      "Bash(git worktree remove -f:*)",
-      "Bash(git worktree remove --force:*)",
-      "Bash(gh pr close:*)",
-      "Bash(gh issue close:*)"
-    ],
     "deny": [
       "Bash(sudo:*)",
       "Bash(git clone:*)",
@@ -66,8 +53,25 @@
       "Read(~/.aws/**)",
       "Bash(nc:*)"
     ],
+    "ask": [
+      "Bash(git push:*)",
+      "Bash(rm -rf:*)",
+      "Bash(rm -r:*)",
+      "Bash(rm -fr:*)",
+      "Bash(rm -f:*)",
+      "Bash(rm --force:*)",
+      "Bash(git branch -D:*)",
+      "Bash(git worktree remove -f:*)",
+      "Bash(git worktree remove --force:*)",
+      "Bash(gh pr close:*)",
+      "Bash(gh issue close:*)"
+    ],
     "defaultMode": "acceptEdits"
   },
+  "model": "claude-fable-5[1m]",
+  "fallbackModel": [
+    "claude-sonnet-5"
+  ],
   "hooks": {
     "StopFailure": [
       {
@@ -86,9 +90,6 @@
     "type": "command",
     "command": "~/.claude/statusline/main.ts"
   },
-  "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true
-  },
   "effortLevel": "high",
   "advisorModel": "opus",
   "tui": "fullscreen",
@@ -96,7 +97,5 @@
   "agentPushNotifEnabled": true,
   "feedbackSurveyState": {
     "lastShownTime": 1754032915018
-  },
-  "model": "claude-fable-5[1m]",
-  "fallbackModel": ["claude-sonnet-5"]
+  }
 }
